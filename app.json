@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "flare-down",
+    "name": "Flare Down",
     "slug": "flare-down",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -16,10 +16,38 @@
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.flaredown.prototype"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      "expo-router",
+      "expo-sqlite",
+      "expo-sharing",
+      [
+        "expo-image-picker",
+        {
+          "cameraPermission": "Flare Down uses the camera to photograph your skin and meals. Photos stay on your phone."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Flare Down uses your approximate location to log daily weather and humidity."
+        }
+      ],
+      "expo-notifications",
+      "expo-image",
+      "expo-font",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Flare Down uses the camera to scan food barcodes and photograph meals and skin. Photos stay on your phone."
+        }
+      ]
+    ],
+    "scheme": "flaredown"
   }
 }
